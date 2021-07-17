@@ -1,0 +1,26 @@
+body {
+	font-size: 20px;
+}
+.nav {
+	background-color: rgb(75, 81, 88);
+	height: 50px;
+}
+
+.item {
+	float: left;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.item-link {
+	color: white;
+	padding-right: 10px;
+	display: block;
+}
+
+.item-link:hover {
+	background-color: blue;
+}
