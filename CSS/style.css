@@ -1,13 +1,12 @@
-body {
-	font-size: 20px;
-}
-.nav {
+.list {
 	background-color: rgb(75, 81, 88);
-	height: 50px;
+	border-bottom: 2px solid blue;
 }
 
 .item {
 	float: left;
+	margin-right: 30px;
+	position: relative;
 }
 
 .clearfix::after {
@@ -15,12 +14,55 @@ body {
 	display: block;
 	clear: both;
 }
-.item-link {
+
+.link {
 	color: white;
-	padding-right: 10px;
-	display: block;
+	text-transform: uppercase;
 }
 
-.item-link:hover {
+.link:hover {
+	border: 1px solid black;
 	background-color: blue;
+}
+
+.sub-link {
+	background-color: rgb(75, 81, 88);
+	color: white;
+	text-transform: uppercase;
+}
+
+.sub-link:hover {
+	border: 1px solid black;
+	background-color: blue;
+}
+
+.sub-list {
+	position: absolute;
+	top: 100%;
+	left: 0px;
+}
+
+.child-sub-link {
+	background-color: rgb(75, 81, 88);
+	color: white;
+	text-transform: uppercase;
+}
+
+.child-sub-link:hover {
+	border: 1px solid black;
+	background-color: blue;
+}
+
+.sub-item {
+	position: relative;
+}
+
+.child-sub-list {
+	position: absolute;
+	top: 0px;
+	left: 75px;
+}
+
+.child-sub-item {
+	width: 500px;
 }
