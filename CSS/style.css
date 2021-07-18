@@ -1,3 +1,16 @@
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.nav {
+	height: 50px;
+}
+.link {
+	color: white;
+	text-transform: uppercase;
+}
+
 .list {
 	background-color: rgb(75, 81, 88);
 	border-bottom: 2px solid blue;
@@ -7,17 +20,6 @@
 	float: left;
 	margin-right: 30px;
 	position: relative;
-}
-
-.clearfix::after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.link {
-	color: white;
-	text-transform: uppercase;
 }
 
 .link:hover {
@@ -31,26 +33,39 @@
 	text-transform: uppercase;
 }
 
+.sub-list {
+	padding-bottom: 10px;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	display: none;
+}
+
+.item:hover .sub-list {
+	display: block;
+}
+
 .sub-link:hover {
 	border: 1px solid black;
 	background-color: blue;
 }
 
-.sub-list {
-	position: absolute;
-	top: 100%;
-	left: 0px;
-}
-
-.child-sub-link {
+.child-sub-list {
 	background-color: rgb(75, 81, 88);
 	color: white;
 	text-transform: uppercase;
 }
 
+.child-sub-link {
+	color: white;
+}
 .child-sub-link:hover {
 	border: 1px solid black;
 	background-color: blue;
+}
+
+.child-sub-item {
+	width: max-content;
 }
 
 .sub-item {
@@ -61,8 +76,9 @@
 	position: absolute;
 	top: 0px;
 	left: 75px;
+	display: none;
 }
 
-.child-sub-item {
-	width: 500px;
+.sub-item:hover .child-sub-list {
+	display: block;
 }
